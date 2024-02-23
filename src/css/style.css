@@ -1,0 +1,390 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  scroll-margin-top: 100px;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: #f1f1f1;
+  min-height: 200vh;
+}
+div .open-menu {
+  height: 222px;
+  width: 230px;
+  transition: all;
+  right: 350px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transition: 0.6s;
+  padding: 20px 100px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  position: fixed;
+  border-bottom: 1px solid #333;
+}
+
+.navbar .btn-grad {
+  display: inline-block;
+  background: #2f95bd;
+  border-radius: 1rem;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 0 1rem #2f95bd;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  transition: 0.5s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-grad:hover {
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.658);
+}
+
+.nav-list {
+  background-image: radial-gradient(
+      18% 28% at 24% 50%,
+      #cefaffff 7%,
+      #073aff00 100%
+    ),
+    radial-gradient(18% 28% at 18% 71%, #ffffff59 6%, #073aff00 100%),
+    radial-gradient(70% 53% at 36% 76%, #73f2ffff 0%, #073aff00 100%),
+    radial-gradient(42% 53% at 15% 94%, #ffffffff 7%, #073aff00 100%),
+    radial-gradient(42% 53% at 34% 72%, #ffffffff 7%, #073aff00 100%),
+    radial-gradient(18% 28% at 35% 87%, #ffffffff 7%, #073aff00 100%),
+    radial-gradient(31% 43% at 7% 98%, #ffffffff 24%, #073aff00 100%),
+    radial-gradient(21% 37% at 72% 23%, #d3ff6d9c 24%, #073aff00 100%),
+    radial-gradient(35% 56% at 91% 74%, #8a4ffff5 9%, #073aff00 100%),
+    radial-gradient(74% 86% at 67% 38%, #6dffaef5 24%, #073aff00 100%),
+    linear-gradient(125deg, #4eb5ffff 1%, #4c00fcff 100%);
+  background-size: 0% 0.288rem;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: background-size 300ms ease;
+}
+
+.nav-list:active,
+.nav-list:hover {
+  background-size: 100% 0.188rem;
+}
+
+.navbar-nav a {
+  position: relative;
+  font-size: 1.3rem;
+  margin: 0 25px;
+  color: #fff;
+  transition: 0.6s;
+}
+.navbar.sticky {
+  padding: 12px 100px;
+  background-color: #fff;
+}
+.navbar.sticky .navbar-logo,
+.navbar.sticky .navbar-nav a,
+.navbar.sticky .navbar-icons {
+  color: #000;
+}
+.navbar.sticky #contact {
+  color: #ffff;
+}
+.navbar-icons {
+  position: relative;
+  transition: 0.6s;
+  font-size: 25px;
+  right: 0;
+}
+.navbar-icons:hover {
+  color: grey;
+  cursor: pointer;
+}
+.navbar-logo {
+  position: relative;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../img/sekolah.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container {
+  display: block;
+  text-align: center;
+}
+.container h2 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.container a:hover {
+  background-color: #555;
+}
+.about {
+  background-color: #000;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: white;
+}
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height: 135vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+.instagram:hover {
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+.ig {
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(65, 105, 225, 0.452);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(85, 125, 245);
+  transition: 3.3s;
+}
+
+#box-jurusan:hover #panah {
+  transform: translateX(20px);
+}
+
+#box-jurusan #isi-jurusan,
+#panah {
+  transition: all 0.2s ease;
+}
+
+#box-jurusan:hover #isi-jurusan {
+  height: 250px;
+}
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
+  background-image: url("../img/parallax.png");
+  opacity: 0.35;
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+}
+
+footer {
+  padding: 85px 15% 70px;
+  box-shadow: rgba(221, 221, 221, 0.15) 90px 18px 50px 0px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  gap: 3.5rem;
+  background: #1a142f;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: rgba(221, 221, 221, 0.15) 90px;
+}
+
+.logo {
+  font-size: 33px;
+  color: white;
+  font-weight: 700;
+}
+
+span {
+  color: #38bdf8;
+}
+
+.footer-content h4 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 20px;
+}
+
+.footer-content li {
+  margin-bottom: 16px;
+}
+
+.footer-content li a {
+  display: block;
+  color: #d6d6d6;
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.4s ease;
+}
+
+.footer-content li a:hover {
+  transform: translateY(-3px) translateX(-5px);
+  color: white;
+}
+
+.footer-content p {
+  color: #d6d6d6;
+  font: 16px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.icon a {
+  display: inline-block;
+  font-size: 25px;
+  color: #d6d6d6;
+  margin-right: 20px;
+  transition: all 0.4s ease;
+}
+
+.icon a:hover {
+  color: #38bdf8;
+  transform: translateY(-5px);
+}
